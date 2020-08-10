@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * # NOTICE OF LICENSE
+ * This work is licensed under a ***Creative Commons Attribution-NonCommercial-
+ * NoDerivs 3.0 Unported License*** http://creativecommons.org/licenses/by-nc-nd/3.0
+ *
+ * ## Authors
+*
+ * Iván Miranda @deivanmiranda
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<!--
+	event catalog_product_is_salable_after
+	-->		
+    <event name="catalog_product_is_salable_after">
+        <observer name="sincco_product_available" instance="Sincco\HidePriceForGuests\Observer\SalableObserver" />
+    </event>
+	<!--
+	event sales_quote_product_add_after
+	-->	    
+    <event name="sales_quote_product_add_after">
+        <observer name="sincco_product_available" instance="Sincco\HidePriceForGuests\Observer\QuoteObserver" />
+    </event>
+	<!--
+	event catalog_product_collection_load_after
+	-->	    
+    <event name="catalog_product_collection_load_after">
+        <observer name="sincco_product_available" instance="Sincco\HidePriceForGuests\Observer\CollectionObserver" />
+    </event>  
+	<!--
+	event catalog_product_load_after
+	-->	    
+    <event name="catalog_product_load_after">
+        <observer name="sincco_product_available" instance="Sincco\HidePriceForGuests\Observer\ProductObserver" />
+    </event>  	
+</config>

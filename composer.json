@@ -1,0 +1,25 @@
+{
+	"name": "sincco/m2-hide-prices-for-guests",
+	"description": "Extension allows the store owner to hide the product price and add to cart button from certain customer groups.",
+	"type": "magento2-module",
+	"version": "1.0.0",
+	"license": [
+		"CC-BY-NC-ND"
+	],
+	"autoload": {
+		"files": [
+			"registration.php"
+		],
+		"psr-4": {
+			"Sincco\\HidePriceForGuests\\": ""
+		}
+	},
+	"authors": [
+		{
+			"name": "Ivan Miranda",
+			"email": "pa.ivan.miranda@gmail.com",
+			"homepage": "http://ivanmiranda.me",
+			"role": "Leader"
+		}
+	]
+}
